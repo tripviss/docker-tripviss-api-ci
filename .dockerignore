@@ -1,0 +1,10 @@
+*.sublime-project
+*.sublime-workspace
+.dockerignore
+.DS_Store
+.editorconfig
+.git/
+.gitignore
+.gitmodules
+Dockerfile
+Thumbs.db
