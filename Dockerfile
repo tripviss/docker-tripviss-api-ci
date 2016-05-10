@@ -32,7 +32,7 @@ RUN curl -fSL https://getcomposer.org/installer | php \
 ENV COMPOSER_HOME /root/.composer
 ENV PATH $PATH:$COMPOSER_HOME/vendor/bin
 
-RUN composer global require hirak/prestissimo
+RUN composer global require hirak/prestissimo:dev-master
 
 RUN curl -fSL https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit \
     && chmod +x /usr/local/bin/phpunit
