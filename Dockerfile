@@ -11,10 +11,11 @@ RUN apk add --no-cache --virtual .persistent-deps \
 ENV APCU_VERSION 5.1.3
 
 RUN set -xe \
-	&& apk add --no-cache --virtual .build-deps \
-		icu-dev \
-		zlib-dev \
-	&& docker-php-ext-install \
+    && apk add --no-cache --virtual .build-deps \
+        $PHPIZE_DEPS \
+        icu-dev \
+        zlib-dev \
+    && docker-php-ext-install \
         intl \
         mbstring \
         zip \
