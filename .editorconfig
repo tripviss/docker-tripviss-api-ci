@@ -19,7 +19,7 @@ insert_final_newline = true
 trim_trailing_whitespace = false
 
 [*.sh]
-indent_style = space
+indent_style = tab
 indent_size = 4
 
 [*.sublime-project]
@@ -28,6 +28,10 @@ indent_style = tab
 [.gitmodules]
 indent_style = tab
 
-[Dockerfile]
+[composer.json]
 indent_style = space
+indent_size = 4
+
+[Dockerfile]
+indent_style = tab
 indent_size = 4
