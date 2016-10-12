@@ -5,6 +5,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
 		ca-certificates \
 		curl \
 		git \
+		gmp \
 		icu \
 		zlib
 
@@ -16,6 +17,8 @@ RUN set -xe \
 		icu-dev \
 		zlib-dev \
 	&& docker-php-ext-install \
+		bcmath \
+		gmp \
 		intl \
 		mbstring \
 		zip \
