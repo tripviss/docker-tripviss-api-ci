@@ -14,6 +14,7 @@ ENV APCU_VERSION 5.1.7
 RUN set -xe \
 	&& apk add --no-cache --virtual .build-deps \
 		$PHPIZE_DEPS \
+		gmp-dev \
 		icu-dev \
 		zlib-dev \
 	&& docker-php-ext-install \
