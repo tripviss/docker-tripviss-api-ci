@@ -1,4 +1,4 @@
-FROM php:7.0-alpine
+FROM php:7.1-alpine
 
 # persistent / runtime deps
 RUN apk add --no-cache --virtual .persistent-deps \
@@ -43,4 +43,5 @@ ENV PATH $PATH:$COMPOSER_HOME/vendor/bin
 COPY composer.json /root/.composer
 COPY php.ini /usr/local/etc/php/
 
-RUN composer global update --prefer-dist --no-progress --no-suggest
+RUN composer global update --prefer-dist --no-progress --no-suggest --optimize-autoloader --classmap-authoritative \
+	&& composer clear-cache
