@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
 		icu \
 		zlib
 
-ENV APCU_VERSION 5.1.7
+ENV APCU_VERSION 5.1.8
 
 RUN set -xe \
 	&& apk add --no-cache --virtual .build-deps \
