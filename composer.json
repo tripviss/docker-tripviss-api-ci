@@ -3,6 +3,6 @@
         "hirak/prestissimo": "^0.3.7"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.3.2"
+        "friendsofphp/php-cs-fixer": "^2.10.2"
     }
 }
