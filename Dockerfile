@@ -1,4 +1,4 @@
-FROM php:7.1-alpine
+FROM php:7.2-alpine3.7
 
 RUN apk add --no-cache --virtual .persistent-deps \
 		ca-certificates \
@@ -8,7 +8,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
 		icu-libs \
 		zlib
 
-ENV APCU_VERSION 5.1.8
+ENV APCU_VERSION 5.1.9
 
 RUN set -xe \
 	&& apk add --no-cache --virtual .build-deps \
